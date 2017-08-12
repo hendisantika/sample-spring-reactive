@@ -2,5 +2,5 @@
 
 Open your terminal then run this :
 
-`gradle bootRun`
+`gradle clean bootRun`
 
