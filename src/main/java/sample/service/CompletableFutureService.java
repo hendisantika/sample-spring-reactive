@@ -2,10 +2,9 @@ package sample.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 import sample.model.Message;
-import sample.utils.Util;
 import sample.model.MessageAcknowledgement;
+import sample.utils.Util;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
