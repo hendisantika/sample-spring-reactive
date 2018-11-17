@@ -2,13 +2,13 @@ package sample.web;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import sample.service.CompletableFutureService;
 import sample.model.Message;
 import sample.model.MessageAcknowledgement;
+import sample.service.CompletableFutureService;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -23,7 +23,7 @@ public class CompletableFutureController {
         this.aService = aService;
     }
 
-    @RequestMapping(path = "/handleMessageFuture", method = RequestMethod.POST)
+    @PostMapping("/handleMessageFuture")
     public CompletableFuture<MessageAcknowledgement> handleMessage(@RequestBody Message message) {
         return this.aService.handleMessage(message);
     }
